@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+driver_config:
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[git::default]
+    attributes:
+
+  - name: server
+    run_list:
+      - recipe[git::server]
+    attributes:

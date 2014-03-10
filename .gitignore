@@ -1,0 +1,5 @@
+# Commit without kitchen sink ;).
+.kitchen/
+
+# Lock files.
+*.lock
